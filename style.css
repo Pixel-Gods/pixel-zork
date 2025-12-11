@@ -1,0 +1,28 @@
+/* Simple responsive styles for the text adventure */
+:root{
+  --bg:#0b1220;
+  --panel:#0f1724;
+  --accent:#7ad0ff;
+  --text:#dbeafe;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.02);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#071024);color:var(--text)}
+#game{max-width:860px;margin:32px auto;padding:20px;background:linear-gradient(180deg,var(--panel),#071127);border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03)}
+h1{margin:0 0 12px;color:var(--accent);font-size:1.4rem}
+#output{min-height:260px;padding:14px;background:var(--glass);border-radius:8px;overflow:auto;border:1px solid rgba(255,255,255,0.02)}
+#controls{display:flex;gap:8px;margin-top:12px}
+#command{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);outline:none}
+#submit,#restart,#help{padding:10px 12px;border-radius:8px;border:none;background:var(--accent);color:#042a33;font-weight:600;cursor:pointer}
+#submit:hover,#restart:hover,#help:hover{filter:brightness(.95)}
+#footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--muted);font-size:0.95rem}
+#inv-list{color:var(--text);font-weight:600}
+.command{color:var(--accent);font-weight:700}
+.system{color:var(--muted);font-style:italic}
+a { color: var(--accent) }
+@media (max-width:520px){
+  #game{margin:12px;padding:12px}
+  #output{min-height:220px}
+}

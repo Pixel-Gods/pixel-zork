@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pixel Zork — A Tiny Text Adventure</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game">
+    <h1>Pixel Zork</h1>
+    <div id="output" aria-live="polite"></div>
+
+    <div id="controls">
+      <input id="command" autocomplete="off" placeholder="Type a command (e.g. 'go north', 'take key', 'look')" />
+      <button id="submit">Enter</button>
+      <button id="restart">Restart</button>
+      <button id="help">Help</button>
+    </div>
+
+    <section id="footer">
+      <div id="status">
+        <span id="location"></span> · <span id="moves">Moves: 0</span>
+      </div>
+      <div id="inventory">Inventory: <span id="inv-list">—</span></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
